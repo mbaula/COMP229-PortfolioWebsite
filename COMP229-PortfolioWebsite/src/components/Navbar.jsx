@@ -44,7 +44,7 @@ const Navbar = ({portfolioColor}) => {
       <Box display={{ base: 'none', md: 'block' }}>
         <Link _hover={{color: portfolioColor}} px={5} href="#" fontSize={{ base: "md", md: "lg" }} as={RouterLink} to="/">Home</Link>
         <Link _hover={{color: portfolioColor}} px={5} href="#" fontSize={{ base: "md", md: "lg" }} as={RouterLink} to="/about">About</Link>
-        <Link _hover={{color: portfolioColor}} px={5} href="#" fontSize={{ base: "md", md: "lg" }}>Projects</Link>
+        <Link _hover={{color: portfolioColor}} px={5} href="#" fontSize={{ base: "md", md: "lg" }} as={RouterLink} to="/projects">Projects</Link>
         <Link _hover={{color: portfolioColor}} px={5} href="#" fontSize={{ base: "md", md: "lg" }}>Services</Link>
         <Link _hover={{color: portfolioColor}} px={5} href="#" fontSize={{ base: "md", md: "lg" }}>Contact</Link>
       </Box>
@@ -69,9 +69,9 @@ const Navbar = ({portfolioColor}) => {
             {/* Container for the navigation links inside the Drawer */}
             <DrawerBody>
               <Flex direction="column" h="100%" justify="center">
-                <Link py={2} href="#" onClick={closeDrawer}>Home</Link>
+                <Link py={2} href="#" onClick={closeDrawer} as={RouterLink} to="/">Home</Link>
                 <Link py={2} href="#" onClick={closeDrawer} as={RouterLink} to="/about">About</Link>
-                <Link py={2} href="#" onClick={closeDrawer}>Projects</Link>
+                <Link py={2} href="#" onClick={closeDrawer} as={RouterLink} to="/projects">Projects</Link>
                 <Link py={2} href="#" onClick={closeDrawer}>Services</Link>
                 <Link py={2} href="#" onClick={closeDrawer}>Contact</Link>
               </Flex>

@@ -9,6 +9,7 @@ import {
   Icon,
   Button
 } from "@chakra-ui/react";
+import { Link as RouterLink } from 'react-router-dom';
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const HomePage = ({portfolioColor}) => {
@@ -44,16 +45,15 @@ const HomePage = ({portfolioColor}) => {
           />
         </Text>
         <Text py={8} fontSize={{ base: "lg", sm: "lg", md: "xl" }} textAlign="center">
-          My mission is to leverage technology to create innovative and impactful solutions,
-          be this in the form of software engineering, web development or data science! I aspire to
-          continuously expand my skills in software and beyond and hopefully create meaningful contributions
+          My mission is to leverage technology to create innovative and impactful solutions.
+          I aspire to continuously expand my skills in software and beyond and hopefully create meaningful contributions
           that will make at least one person's life just a bit easier.
         </Text>
 
         <HStack spacing={4}>
           <Icon as={FaGithub} w={6} h={6} _hover={{ color: portfolioColor }} onClick={() => openInNewTab('https://github.com/mbaula')}/>
           <Icon as={FaLinkedin} w={6} h={6} _hover={{ color: portfolioColor }} onClick={() => openInNewTab('https://www.linkedin.com/in/mark-b17/')}/>
-          <Button color={portfolioColor}>
+          <Button color={portfolioColor} as={RouterLink} to="/projects">
             View My Work
           </Button>
         </HStack>
