@@ -12,6 +12,7 @@ Jan 26 2024
 */
 
 const ContactPage = ({ portfolioColor }) => {
+  // useToast hook to show notifications modal
   const toast = useToast();
   const [formData, setFormData] = useState({
     firstName: '',
@@ -21,34 +22,39 @@ const ContactPage = ({ portfolioColor }) => {
     message: ''
   });
 
+  // function to open url in new tab
   const openInNewTab = (url) => {
     const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
     if (newWindow) newWindow.opener = null;
   };
 
+  // function to handle input changes and update state
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
+  // function to handle form submission
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(formData); // Replace with actual form submission logic
+    console.log(formData); // for now it simply just logs the form data, in the future will need to change this to be functional
 
+    // show toast modal after submission
     toast({
-      title: "Message Sent",
-      description: "Your message has been successfully sent.",
-      status: "success",
-      duration: 5000,
-      isClosable: true,
+        title: "Message Sent",
+        description: "Your message has been successfully sent.",
+        status: "success",
+        duration: 5000,
+        isClosable: true,
     });
 
+    // clear form data
     setFormData({
-      firstName: '',
-      lastName: '',
-      contactNumber: '',
-      email: '',
-      message: ''
+        firstName: '',
+        lastName: '',
+        contactNumber: '',
+        email: '',
+        message: ''
     });
   };
 
@@ -84,6 +90,7 @@ const ContactPage = ({ portfolioColor }) => {
               <Textarea name="message" value={formData.message} onChange={handleInputChange} placeholder="Your Message" />
             </FormControl>
 
+            {/* Submit button which will call the handle submit function once clicked */}
             <Button type="submit" color={portfolioColor}>Send Message</Button>
             <HStack justify="center" spacing={4}>
                 <Icon as={FaGithub} w={6} h={6} cursor="pointer" _hover={{ color: portfolioColor }} onClick={() => openInNewTab('https://github.com/mbaula')}/>

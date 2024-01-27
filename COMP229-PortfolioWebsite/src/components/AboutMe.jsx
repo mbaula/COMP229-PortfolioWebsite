@@ -10,9 +10,11 @@ Mark Baula
 Jan 26 2024
 */
 
+
 const AboutMe = ({portfolioColor}) => {
   return (
     <Container maxW="4xl" centerContent>
+      {/* VStack to stack children vertically*/}
       <VStack spacing={4} py={{ base: 10, md: 26 }}>
         <Image
           boxSize={{ base: '250px', md: '300px' }}
@@ -35,6 +37,7 @@ const AboutMe = ({portfolioColor}) => {
           I have nearly 2 years of experience working in different areas of software including Software Development, QA automation, 
           Full-stack development, Business Intelligence and Machine Learning!
         </Text>
+        {/* Button component as a link to the resume opening the resume in a new tab */}
         <Button
           color={portfolioColor}
           as="a"

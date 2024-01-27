@@ -11,6 +11,7 @@ Jan 26 2024
 const ServicesGrid = ({ services }) => {
   return (
     <Center marginY={20} p={4}>
+      {/* A grid system to store the services depending on screen size */}
       <SimpleGrid
         columns={{ base: 1, sm: 2, md: 3 }}
         spacing={10}

@@ -20,6 +20,8 @@ Jan 26 2024
 */
 
 const HomePage = ({portfolioColor}) => {
+
+  // function to open in new tab
   const openInNewTab = (url) => {
     const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
       if (newWindow) newWindow.opener = null;
@@ -33,6 +35,7 @@ const HomePage = ({portfolioColor}) => {
         >
           Hey! I'm Mark 👋
         </Heading>
+        {/* Using a npm package for the typing animation */}
         <Text fontSize={{ base: "2xl", sm: "3xl", md: "6xl" }} color={portfolioColor}>
           I'm a
           <TypeAnimation
@@ -60,6 +63,7 @@ const HomePage = ({portfolioColor}) => {
         <HStack spacing={4}>
           <Icon as={FaGithub} w={6} h={6} _hover={{ color: portfolioColor }} onClick={() => openInNewTab('https://github.com/mbaula')}/>
           <Icon as={FaLinkedin} w={6} h={6} _hover={{ color: portfolioColor }} onClick={() => openInNewTab('https://www.linkedin.com/in/mark-b17/')}/>
+          {/* Button that leads to projects page */}
           <Button color={portfolioColor} as={RouterLink} to="/projects">
             View My Work
           </Button>

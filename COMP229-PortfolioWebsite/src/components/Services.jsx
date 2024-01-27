@@ -12,6 +12,7 @@ Mark Baula
 Jan 26 2024
 */
 
+// List of services that will be fed into ServicesGrid component with respective parameters
 const services = [
   {
     title: "Web Development",
@@ -30,7 +31,7 @@ const services = [
   },
 ];
 
-const YourComponent = ({portfolioColor}) => {
+const Services = ({portfolioColor}) => {
     return (
         <Box py={10} textAlign="center">
             <Heading as="h2" size="2xl" _hover={{ color: portfolioColor, transition: "0.5s" }}>
@@ -41,4 +42,4 @@ const YourComponent = ({portfolioColor}) => {
     );
 };
 
-export default YourComponent;
+export default Services;

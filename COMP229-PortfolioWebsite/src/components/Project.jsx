@@ -15,6 +15,7 @@ Jan 26 2024
 */
 
 const Projects = ({portfolioColor}) => {
+    // list of projects with parameters that will be used by projectitem component
     const projects = [
     {
         title: "ViSimulate",
@@ -77,6 +78,7 @@ const Projects = ({portfolioColor}) => {
       <Container maxW="5xl" centerContent>
         <VStack spacing={10} py={{ base: 10, md: 20 }}>
           <Heading as="h2" size="2xl" textAlign="center" _hover={{color: portfolioColor, transition: "0.5s"}}>Projects</Heading>
+          {/* Map each project as a project item with the respective parameters. Will be displayed by the ProjectItem component */}
           {projects.map((project, index) => (
             <ProjectItem
               key={index}
