@@ -31,7 +31,7 @@ const AboutMe = ({portfolioColor}) => {
         <Button
           color={portfolioColor}
           as="a"
-          href=""
+          href="https://github.com/mbaula/COMP229-PortfolioWebsite/blob/main/MarkBaulaResume_Winter_2024.pdf"
           target="_blank"
           rel="noopener noreferrer"
         >
