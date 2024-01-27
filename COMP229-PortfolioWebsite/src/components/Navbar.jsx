@@ -12,10 +12,13 @@ import {
   DrawerBody,
   DrawerOverlay,
   DrawerContent,
-  DrawerCloseButton
+  DrawerCloseButton,
+  Image
 } from '@chakra-ui/react';
 import { HamburgerIcon, MoonIcon, SunIcon } from '@chakra-ui/icons';
 import { Link as RouterLink } from 'react-router-dom';
+import logolight from '.././assets/logo-light.png'
+import logodark from '.././assets/logo-dark.png'
 
 const Navbar = ({portfolioColor}) => {
   // State to check whether the drawer is open or not (https://chakra-ui.com/docs/components/drawer)
@@ -35,9 +38,7 @@ const Navbar = ({portfolioColor}) => {
     <Flex px={6} py={4} align="center" backgroundColor={bgColor} color={color} >
       {/* Displaying Icon */}
       <Box>
-        <Text fontSize="xl" fontWeight="bold">
-          Mark Baula
-        </Text>
+        <Image src={colorMode === 'light' ? logolight : logodark} alt="Mark Baula Logo" height="50px" /> {/* Adjust path and height as needed */}
       </Box>
       <Spacer />
       {/* Desktop links, hidden on smaller screens, like mobile */}
@@ -45,8 +46,8 @@ const Navbar = ({portfolioColor}) => {
         <Link _hover={{color: portfolioColor}} px={5} href="#" fontSize={{ base: "md", md: "lg" }} as={RouterLink} to="/">Home</Link>
         <Link _hover={{color: portfolioColor}} px={5} href="#" fontSize={{ base: "md", md: "lg" }} as={RouterLink} to="/about">About</Link>
         <Link _hover={{color: portfolioColor}} px={5} href="#" fontSize={{ base: "md", md: "lg" }} as={RouterLink} to="/projects">Projects</Link>
-        <Link _hover={{color: portfolioColor}} px={5} href="#" fontSize={{ base: "md", md: "lg" }}>Services</Link>
-        <Link _hover={{color: portfolioColor}} px={5} href="#" fontSize={{ base: "md", md: "lg" }}>Contact</Link>
+        <Link _hover={{color: portfolioColor}} px={5} href="#" fontSize={{ base: "md", md: "lg" }} as={RouterLink} to="/services">Services</Link>
+        <Link _hover={{color: portfolioColor}} px={5} href="#" fontSize={{ base: "md", md: "lg" }} as={RouterLink} to="/contact">Contact</Link>
       </Box>
       <IconButton
         icon={colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
@@ -72,8 +73,8 @@ const Navbar = ({portfolioColor}) => {
                 <Link py={2} href="#" onClick={closeDrawer} as={RouterLink} to="/">Home</Link>
                 <Link py={2} href="#" onClick={closeDrawer} as={RouterLink} to="/about">About</Link>
                 <Link py={2} href="#" onClick={closeDrawer} as={RouterLink} to="/projects">Projects</Link>
-                <Link py={2} href="#" onClick={closeDrawer}>Services</Link>
-                <Link py={2} href="#" onClick={closeDrawer}>Contact</Link>
+                <Link py={2} href="#" onClick={closeDrawer} as={RouterLink} to="/services">Services</Link>
+                <Link py={2} href="#" onClick={closeDrawer} as={RouterLink} to="/contact">Contact</Link>
               </Flex>
             </DrawerBody>
           </DrawerContent>

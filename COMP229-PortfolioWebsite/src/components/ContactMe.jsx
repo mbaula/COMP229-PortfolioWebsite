@@ -1,0 +1,92 @@
+import React, { useState } from 'react';
+import {
+  Box, Heading, FormControl, FormLabel, Input, Textarea, Button, VStack, Link, Icon, useToast, HStack
+} from '@chakra-ui/react';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+
+const ContactPage = ({ portfolioColor }) => {
+  const toast = useToast();
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    contactNumber: '',
+    email: '',
+    message: ''
+  });
+
+  const openInNewTab = (url) => {
+    const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
+    if (newWindow) newWindow.opener = null;
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(formData); // Replace with actual form submission logic
+
+    toast({
+      title: "Message Sent",
+      description: "Your message has been successfully sent.",
+      status: "success",
+      duration: 5000,
+      isClosable: true,
+    });
+
+    setFormData({
+      firstName: '',
+      lastName: '',
+      contactNumber: '',
+      email: '',
+      message: ''
+    });
+  };
+
+  return (
+    <Box p={8}>
+      <VStack spacing={4} align="stretch">
+        <Heading as="h2" size="xl">Contact Me</Heading>
+
+        <Box as="form" onSubmit={handleSubmit}>
+          <VStack spacing={4}>
+            <FormControl isRequired>
+              <FormLabel>First Name</FormLabel>
+              <Input name="firstName" value={formData.firstName} onChange={handleInputChange} placeholder="First Name" />
+            </FormControl>
+
+            <FormControl isRequired>
+              <FormLabel>Last Name</FormLabel>
+              <Input name="lastName" value={formData.lastName} onChange={handleInputChange} placeholder="Last Name" />
+            </FormControl>
+
+            <FormControl isRequired>
+              <FormLabel>Contact Number</FormLabel>
+              <Input name="contactNumber" value={formData.contactNumber} onChange={handleInputChange} type="tel" placeholder="Contact Number" />
+            </FormControl>
+
+            <FormControl isRequired>
+              <FormLabel>Email Address</FormLabel>
+              <Input name="email" value={formData.email} onChange={handleInputChange} type="email" placeholder="Email Address" />
+            </FormControl>
+
+            <FormControl isRequired>
+              <FormLabel>Message</FormLabel>
+              <Textarea name="message" value={formData.message} onChange={handleInputChange} placeholder="Your Message" />
+            </FormControl>
+
+            <Button type="submit" color={portfolioColor}>Send Message</Button>
+            <HStack justify="center" spacing={4}>
+                <Icon as={FaGithub} w={6} h={6} cursor="pointer" _hover={{ color: portfolioColor }} onClick={() => openInNewTab('https://github.com/mbaula')}/>
+                <Icon as={FaLinkedin} w={6} h={6} cursor="pointer" _hover={{ color: portfolioColor }} onClick={() => openInNewTab('https://www.linkedin.com/in/mark-b17/')}/>
+            </HStack>
+          </VStack>
+        </Box>
+      </VStack>
+    </Box>
+  );
+};
+
+export default ContactPage;
