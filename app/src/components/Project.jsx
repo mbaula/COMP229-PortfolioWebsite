@@ -1,10 +1,10 @@
 import React from 'react';
 import { Container, VStack, Heading } from '@chakra-ui/react';
 import ProjectItem from './ProjectItem'; 
-import visimulate from '.././assets/visimulate.png';
-import jettbot from '.././assets/jettbot.png'
-import deeplearning from '.././assets/deeplearning.png'
-import snake from '.././assets/snake.png'
+import visimulate from '../assets/visimulate.png';
+import jettbot from '../assets/jettbot.png'
+import deeplearning from '../assets/deeplearning.png'
+import snake from '../assets/snake.png'
 import { color } from 'framer-motion';
 
 /*

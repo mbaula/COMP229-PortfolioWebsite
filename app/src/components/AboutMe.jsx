@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Container, Image, Text, Heading, VStack, Button } from '@chakra-ui/react';
-import myImage from '.././assets/meandeli.jpeg';
+import myImage from '../assets/meandeli.jpeg';
 import { Link as RouterLink } from 'react-router-dom';
 
 /*
