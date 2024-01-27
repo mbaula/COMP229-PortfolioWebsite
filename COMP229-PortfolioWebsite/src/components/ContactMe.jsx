@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import {
   Box, Heading, FormControl, FormLabel, Input, Textarea, Button, VStack, Link, Icon, useToast, HStack
 } from '@chakra-ui/react';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
 /*
 ContactMe.jsx
@@ -95,6 +95,7 @@ const ContactPage = ({ portfolioColor }) => {
             <HStack justify="center" spacing={4}>
                 <Icon as={FaGithub} w={6} h={6} cursor="pointer" _hover={{ color: portfolioColor }} onClick={() => openInNewTab('https://github.com/mbaula')}/>
                 <Icon as={FaLinkedin} w={6} h={6} cursor="pointer" _hover={{ color: portfolioColor }} onClick={() => openInNewTab('https://www.linkedin.com/in/mark-b17/')}/>
+                <Icon as={FaEnvelope} w={6} h={6} cursor="pointer" _hover={{ color: portfolioColor }} onClick={() => openInNewTab('mailto:mbaula@my.centennialcollege.ca')}/>
             </HStack>
           </VStack>
         </Box>
