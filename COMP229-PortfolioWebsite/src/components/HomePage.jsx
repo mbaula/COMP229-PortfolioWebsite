@@ -12,6 +12,13 @@ import {
 import { Link as RouterLink } from 'react-router-dom';
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
+/*
+HomePage.jsx
+Mark Baula
+301369567
+Jan 26 2024
+*/
+
 const HomePage = ({portfolioColor}) => {
   const openInNewTab = (url) => {
     const newWindow = window.open(url, '_blank', 'noopener,noreferrer');

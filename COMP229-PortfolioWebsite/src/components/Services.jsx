@@ -5,6 +5,13 @@ import tutor from '.././assets/tutor.png'
 import data from '.././assets/data.jpeg'
 import { Box, Heading } from '@chakra-ui/react';
 
+/*
+Services.jsx
+Mark Baula
+301369567
+Jan 26 2024
+*/
+
 const services = [
   {
     title: "Web Development",

@@ -7,6 +7,13 @@ import deeplearning from '.././assets/deeplearning.png'
 import snake from '.././assets/snake.png'
 import { color } from 'framer-motion';
 
+/*
+Project.jsx
+Mark Baula
+301369567
+Jan 26 2024
+*/
+
 const Projects = ({portfolioColor}) => {
     const projects = [
     {

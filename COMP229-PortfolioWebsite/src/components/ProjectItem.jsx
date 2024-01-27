@@ -1,6 +1,13 @@
 import React from 'react';
 import { Box, Image, Text, Heading, HStack, Link, Badge, useBreakpointValue, VStack } from '@chakra-ui/react';
 
+/*
+Projectitem.jsx
+Mark Baula
+301369567
+Jan 26 2024
+*/
+
 const ProjectItem = ({ title, description, imageUrl, externalLink, reverse, badges, textColor }) => {
     const StackComponent = useBreakpointValue({ base: VStack, md: HStack });
     const itemLayout = useBreakpointValue({ base: 'column', md: reverse ? 'row-reverse' : 'row' });

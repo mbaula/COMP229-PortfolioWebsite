@@ -3,6 +3,13 @@ import { Box, Container, Image, Text, Heading, VStack, Button } from '@chakra-ui
 import myImage from '.././assets/meandeli.jpeg';
 import { Link as RouterLink } from 'react-router-dom';
 
+/*
+AboutMe.jsx
+Mark Baula
+301369567
+Jan 26 2024
+*/
+
 const AboutMe = ({portfolioColor}) => {
   return (
     <Container maxW="4xl" centerContent>

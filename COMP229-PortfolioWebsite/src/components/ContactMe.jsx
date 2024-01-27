@@ -4,6 +4,13 @@ import {
 } from '@chakra-ui/react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
+/*
+ContactMe.jsx
+Mark Baula
+301369567
+Jan 26 2024
+*/
+
 const ContactPage = ({ portfolioColor }) => {
   const toast = useToast();
   const [formData, setFormData] = useState({

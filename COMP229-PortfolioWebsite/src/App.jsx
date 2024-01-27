@@ -8,6 +8,13 @@ import Projects from './components/Project.jsx';
 import Services from './components/Services.jsx';
 import ContactMe from './components/ContactMe.jsx';
 
+/*
+App.jsx
+Mark Baula
+301369567
+Jan 26 2024
+*/
+
 function App() {
   const portfolioColor = '#E94560';
 

@@ -1,6 +1,13 @@
 import React from 'react';
 import { SimpleGrid, Box, Image, Text, Heading, Center } from '@chakra-ui/react';
 
+/*
+ServicesGrid.jsx
+Mark Baula
+301369567
+Jan 26 2024
+*/
+
 const ServicesGrid = ({ services }) => {
   return (
     <Center marginY={20} p={4}>

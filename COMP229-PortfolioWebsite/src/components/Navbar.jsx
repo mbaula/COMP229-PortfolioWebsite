@@ -20,6 +20,13 @@ import { Link as RouterLink } from 'react-router-dom';
 import logolight from '.././assets/logo-light.png'
 import logodark from '.././assets/logo-dark.png'
 
+/*
+Navbar.jsx
+Mark Baula
+301369567
+Jan 26 2024
+*/
+
 const Navbar = ({portfolioColor}) => {
   // State to check whether the drawer is open or not (https://chakra-ui.com/docs/components/drawer)
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
