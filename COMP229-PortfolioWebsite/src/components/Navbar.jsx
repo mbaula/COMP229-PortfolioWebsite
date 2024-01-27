@@ -38,7 +38,9 @@ const Navbar = ({portfolioColor}) => {
     <Flex px={6} py={4} align="center" backgroundColor={bgColor} color={color} >
       {/* Displaying Icon */}
       <Box>
-        <Image src={colorMode === 'light' ? logolight : logodark} alt="Mark Baula Logo" height="50px" /> {/* Adjust path and height as needed */}
+        <RouterLink to={"/"}>
+          <Image src={colorMode === 'light' ? logolight : logodark} alt="Mark Baula Logo" height="50px"/>
+        </RouterLink>
       </Box>
       <Spacer />
       {/* Desktop links, hidden on smaller screens, like mobile */}
